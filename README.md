@@ -7,7 +7,8 @@
 * A high-performance cultural discovery platform featuring an interactive geospatial SVG map of India. This project prioritizes premium aesthetics with customized UI components, responsive layouts for diverse data visualization, and a seamless event-driven user experience.
 
 
-
+## 🚀 Live Demo
+**Check out the live project here:** [Link](https://maurya-code.github.io/explore-india/)
 
 
 
