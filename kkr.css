@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700|Yesteryear&display=swap');
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Yesteryear', cursive; */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+@keyframes zoominlogo{
+  0%{transform:scale(1)}
+  30%{transform: scale(0.9)}
+  100%{transform:scale(1)}
+}
+#preLoad{
+    width:100%;
+    height: 100%;
+    background:#fff url("images/Loader.gif") no-repeat center;
+    position: fixed;
+    z-index:9999;
+}
+header{
+    
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    font-weight:700;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+    z-index:99;
+}
+header .navbar{
+    background:transparent;
+padding:20px 0px 40px;
+transition: 0.5s;
+overflow:elipsis;
+}
+header .navbar .logo{
+  float:left;
+  font-family: 'Yesteryear', cursive;
+  font-size:30px;
+  margin-left:10%;
+  transition: 0.5s ease;
+  
+}
+header .navbar.new .logo{
+  float:left;
+  font-family: 'Yesteryear', cursive;
+  color:white;
+  font-size:20px;
+  margin-left:10%;
+  transition: 0.5s ease;
+}
+header .navbar.new .logo a{
+  text-decoration: none;
+  color:white;
+}
+header .navbar .logo a{
+  text-decoration: none;
+  color:black;
+}
+header .navbar .logo a:hover p{
+  transition: ease;
+  animation: zoominlogo 0.5s;
+}
+header .navbar .logo a::after{
+  text-decoration: none;
+  color:black;
+}
+header .navbar.new  .logo a::after{
+  text-decoration: none;
+  color:white;
+}
+
+header .navbar.new{
+    background:dodgerblue;
+    padding:20px 0px 40px;
+    transition: 0.5s ease;
+    }
+    header .navbar.new a{
+        color:white;
+        transition:0.5s ease;
+        } 
+        header .navbar.new a:hover{
+            color:black;
+            }  
+header .navbar ul{
+    float:right; 
+    display: flex;
+}
+header .navbar ul li{
+    list-style: none;
+    
+}
+header .navbar ul li a::after{
+    color:white;
+}
+header .navbar ul li a{
+    color:#000;
+    padding:10px 20px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:roboto;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    border-radius:10px;
+}
+header .navbar ul li a:hover{
+    background:dodgerblue;
+    color:#fff;
+    box-shadow: 0px 5px 10px rgb(211, 209, 209);
+}
+header .change{
+    background:dodgerblue;
+}
+.firstdiv
+{
+    position: relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+/* box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:20px 0px 20px 0px; */
+
+}
+.firstdiv .firstddivimg
+{
+    position:absolute;
+    width:100%;
+    height:90%;
+    overflow:hidden;
+}
+.firstdiv .firstdivcontent{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    padding:10px;
+    background-image:linear-gradient(0deg,white 30%,transparent  70%);
+    height:40%;
+    font-family:'Roboto', sans-serif;
+  font-weight:300;
+    /* box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    text-align: center;
+}
+.firstdiv .firstdivcontent h2{
+    width:100%;
+    color:white;
+    bottom:100px;
+    font-size:80px;
+    letter-spacing: 10px;
+    text-shadow: 2px 5px 5px black;
+    /* box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    text-align: center;
+}
+
+   
+
+
+
+
+
+
+
+  .overview {
+    position: relative;
+    background-color: rgb(70, 147, 248);
+  }
+  
+  .overview::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(70, 147, 248);
+    transform-origin: top left;
+    transform: skewY(-3deg);
+    z-index: -10;
+  }
+  
+  .overview::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(70, 147, 248);
+    transform-origin: bottom left;
+    transform: skewY(3deg);
+    z-index: -10;
+  }
+  .overview,.blank-space {
+    padding: 50px 0;
+  }
+  
+  .overview .blank-space {
+    height: 100px;
+  }
+  
+  .overview h2 {
+    margin: 0;
+    padding-bottom: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(8, 114, 253);
+    letter-spacing: 15px;
+  }
+  
+ .overview p {
+    width: 70%;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 18px;
+  }
+  
+
+
+
+
+#pvhead{
+  text-transform: uppercase;
+    letter-spacing: 15px;
+    text-align: center;margin-bottom:100px;
+}
+
+.ppl{
+  margin:20px 0px 20px 0px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pplcs
+{
+    position: relative;
+width:100%;
+height:100vh;
+/* padding-top:50px; */
+box-sizing: border-box;
+    overflow:hidden;
+}
+.pplcs .pplcsimgl1
+{
+    position:absolute;
+    float:left;
+    width:50%;
+    left:0;
+    background-image: url("wb/images/victoria\ memorial.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pplcs .pplcscontentr1{
+    position: absolute;
+    float:right;
+    width:50%;
+    right:0;
+    padding:20px;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(115deg,rgb(0, 204, 255) 30%,dodgerblue 70%);
+    text-shadow: 2px black;
+     color:white; 
+    overflow:hidden;
+}
+.pplcs .pplcscontentr1 h2 {
+  margin:20% 0px 5% 0;
+  font-size:60px;
+}
+.pplcs .pplcsimgr1
+{
+    position:absolute;
+    float:right;
+    width:50%;
+    right:0;
+    background-image: url("wb/images/fort\ william.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pplcs .pplcscontentl1{
+    position: absolute;
+    float:left;
+    width:50%;
+    left:0;
+    padding:20px;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(115deg,dodgerblue 30%,rgb(0, 204, 255) 70%);
+     color:white; 
+    overflow:hidden;
+}
+.pplcs .pplcscontentl1 h2 {
+  margin:20% 0px 5% 0;
+  font-size:60px;
+}
+.pplcs .pplcsimgl2
+{
+    position:absolute;
+    float:left;
+    width:50%;
+    left:0;
+    background-image: url("wb/images/belur\ math.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pplcs .pplcscontentr2{
+    position: absolute;
+    float:right;
+    width:50%;
+    right:0;
+    padding:20px;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(115deg,rgb(0, 204, 255) 30%,dodgerblue 70%);
+    text-shadow: 2px black;
+     color:white; 
+    overflow:hidden;
+}
+.pplcs .pplcscontentr2 h2 {
+  margin:20% 0px 5% 0;
+  font-size:60px;
+}
+
+.pplcs .pplcsimgr2
+{
+    position:absolute;
+    float:right;
+    width:50%;
+    right:0;
+    background-image: url("wb/images/Howrah-Bridge.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pplcs .pplcscontentl2{
+    position: absolute;
+    float:left;
+    width:50%;
+    left:0;
+    padding:20px;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(115deg,dodgerblue 30%,rgb(0, 204, 255) 70%);
+     color:white; 
+    overflow:hidden;
+}
+.pplcs .pplcscontentl2 h2 {
+  margin:20% 0px 5% 0;
+  font-size:60px;
+}
+
+
+
+
+
+
+.htrhead{
+  text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.htr{
+  width:100%;
+  margin-bottom: 50px;
+  position: relative;
+}
+ 
+.slantdiv{
+  position: relative;
+  max-width:1200px;
+  padding:0;
+  margin-bottom:0px;
+  height:300px;
+
+}
+.stxt1{
+position: absolute;
+float:left;
+width:50%;
+height:300px;
+background:rgb(167, 167, 228);
+padding:40px 40px 40px 60px;
+transform:skewX(-20deg) translate(-55px,0px);
+z-index: -1;
+overflow:hidden;
+text-align: center;
+}
+.stxt1 p{
+  transform:skewX(20deg);
+} 
+.stxt1 h2{
+  transform:skewX(20deg);
+} 
+.simg1{
+  transform:skewX(-20deg);
+  float:right;
+  padding:0;
+  width:60%;
+  height:300px;
+  position: relative;
+  overflow:hidden;
+  
+}
+.simg1 img{
+  transform:translate(20px,0px) skewX(20deg);
+}
+.htr .slantdiv .stxt2{
+  width:60%;
+  float:right;
+  height:300px;
+  background:rgba(207, 11, 11, 0.808);
+  transform:skewX(20deg) translate(20px,0px);
+  padding:40px 40px 40px 40px;
+  text-align: center;
+  z-index: -1;
+  overflow:hidden;
+}
+.htr .slantdiv .stxt2 p{
+  transform:skewX(-20deg);
+}
+.htr .slantdiv .stxt2 h2{
+  transform:skewX(-20deg);
+}
+.simg2{
+  transform:skewX(20deg);
+  float:left;
+  padding:0;
+  width:40%;
+  height:300px;
+  position: relative;
+  overflow:hidden;
+  
+}
+.simg2 img{
+  transform: skewX(-20deg);
+  transform-origin: bottom right;
+}
+.stxt3{
+  float:left;
+  width:50%;
+  height:300px;
+  background:rgb(167, 167, 228);
+  padding:40px 40px 40px 60px;
+  transform:skewX(-20deg) translate(-55px,0px);
+  z-index: -1;
+  overflow:hidden;
+  text-align: center;
+  }
+  .stxt3 p{
+    transform:skewX(20deg);
+  } 
+  .stxt3 h2{
+    transform:skewX(20deg);
+  } 
+  .simg3{
+    transform:skewX(-20deg);
+    float:right;
+    padding:0;
+    width:50%;
+    position: relative;
+    overflow:hidden;
+  }
+  .simg3 img{
+    transform:translate(20px,0px) skewX(20deg);
+  }
+
+
+
+  .todo{
+    height:1000px;
+    width:100%;
+    margin-bottom:400px;
+    padding:20px;
+  }
+  .todo h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom:20px;
+  }
+  .todo .einfo{
+    box-sizing:border-box;
+    height:300px;
+    width:70%;
+    position: relative;
+    left:15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom:20px;
+padding:20px 40px 20px 40px;
+  }
+  .todo .einfo h3{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .todo .einfo .e1{
+    padding:20px 40px 20px 40px;
+  }

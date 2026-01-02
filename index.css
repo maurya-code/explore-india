@@ -1,0 +1,1164 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700|Yesteryear&display=swap');
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Yesteryear', cursive; */
+@keyframes zoominlogo{
+    0%{transform:scale(1)}
+    30%{transform: scale(0.9)}
+    100%{transform:scale(1)}
+  }
+  @keyframes slideup{
+      0%{
+          transform: translateY(200px);
+          filter:blur(8px);
+  
+      }
+      50%{
+          filter:blur(4px);
+      }
+      100%{
+          transform: translateY(0px);
+      }
+  
+  }
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+@keyframes zoomin{
+    0%{transform:scale(0)}
+    70%{
+        transform:scale(0.95)
+    }
+    90%{
+        transform:scale(0.9)
+    }
+    100%{transform:scale(1)}
+}
+@keyframes zoominlogo{
+  0%{transform:scale(1)}
+  30%{transform: scale(0.9)}
+  100%{transform:scale(1)}
+}
+
+#preLoad{
+    width:100%;
+    height: 100%;
+    background:#fff url("images/Loader.gif") no-repeat center;
+    position: fixed;
+    z-index:9999;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+    z-index:99;
+}
+header .navbar{
+    background:transparent;
+padding:20px 0px 40px;
+transition: 0.5s;
+overflow:elipsis;
+}
+header .navbar .logo{
+  float:left;
+  font-family: 'Yesteryear', cursive;
+  font-size:30px;
+  margin-left:10%;
+  transition: 0.5s ease;
+  
+}
+header .navbar.new .logo{
+  float:left;
+  font-family: 'Yesteryear', cursive;
+  color:white;
+  font-size:20px;
+  margin-left:10%;
+  transition: 0.5s ease;
+}
+header .navbar.new .logo a{
+  text-decoration: none;
+  color:white;
+}
+header .navbar .logo a{
+  text-decoration: none;
+  color:black;
+}
+header .navbar .logo a:hover p{
+  transition: ease;
+  animation: zoominlogo 0.5s;
+}
+header .navbar .logo a::after{
+  text-decoration: none;
+  color:black;
+}
+header .navbar.new  .logo a::after{
+  text-decoration: none;
+  color:white;
+}
+
+header .navbar.new{
+    background:dodgerblue;
+    padding:20px 0px 40px;
+    transition: 0.5s ease;
+    }
+    header .navbar.new a{
+        color:white;
+        transition:0.5s ease;
+        } 
+        header .navbar.new a:hover{
+            color:black;
+            }  
+header .navbar ul{
+    float:right; 
+    display: flex;
+}
+header .navbar ul li{
+    list-style: none;
+    
+}
+header .navbar ul li a::after{
+    color:white;
+}
+header .navbar ul li a{
+    color:#000;
+    padding:10px 20px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    border-radius:10px;
+}
+header .navbar ul li a:hover{
+    background:dodgerblue;
+    color:#fff;
+    box-shadow: 0px 5px 10px rgb(211, 209, 209);
+}
+header .change{
+    background:dodgerblue;
+}
+
+.slideshow-container {
+    width:100%;
+    position: relative;
+    
+    height:100vh;
+    overflow:hidden;
+  }
+  .slideshow-container img{
+      vertical-align: middle;
+  } 
+
+  .mySlides {
+    display: block;
+  }
+ 
+
+  /* .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  } */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .overview{
+    position: absolute;;
+    top:40vh;
+    width:100%;
+    text-align: center;
+    height:100vh;
+  }
+
+.overviewContent{
+    background:rgba(255, 255, 255, 0.747);
+    padding:40px;
+    font-family:'railway';
+    box-sizing:border-box;
+    height:100vh;
+    width:100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding:20px 40px 20px 40px;
+    margin:50px 0px 50px 0px;
+    
+}
+.overviewContent p{
+    font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
+.overview h2{
+    font-size: 10em;
+    text-align: center;
+    color:white;
+    font-family:'Merriweather';
+    letter-spacing: 40px;
+    text-shadow: 5px 10px 15px black;
+}
+.overviewContent h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+.mainmaphead{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+
+
+
+.mainMap{
+    margin:10px 0px 10px 0px;
+    position: relative;
+}
+
+
+.Ups img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:15%;
+    left:45%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Ups a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+
+}
+.Rjs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:20%;
+    left:28%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Rjs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Bhs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:100px;
+    left:50%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Bhs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Jks img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:2%;
+    left:30%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Jks a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Hps img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:15px;
+    left:40%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Hps a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+   
+}
+.Pns img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:100px;
+    left:30%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Pns a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Chds img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:90px;
+    left:32%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Chds a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Uks img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:50px;
+    left:46%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Uks a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Hys img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:50px;
+    left:32%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Hys a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Delhis img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:70px;
+    left:32%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Delhis a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Mps img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:45%;
+    left:40%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Mps a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Gjs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left:22%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Gjs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Jhs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:40%;
+    left:42%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Jhs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Wbs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:40%;
+    left:55%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Wbs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Asms img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:30%;
+    left:50%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Asms a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Skms img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:15%;
+    left:55%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Skms a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Mgls img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:20%;
+    left:55%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Mgls a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Trprs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:40%;
+    left:60%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Trprs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Arnps img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:15%;
+    left:65%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Arnps a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Nglnds img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:20%;
+    left:65%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Nglnds a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Mnps img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:28%;
+    left:65%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Mnps a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Mzrms img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:35%;
+    left:62%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Mzrms a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Csts img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left:38%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Csts a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Ods img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left:40%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Ods a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Mhs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:60%;
+    left:32%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Mhs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Tlns img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:62%;
+    left:32%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Tlns a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Ktks img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:75%;
+    left:28%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Ktks a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Aps img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:75%;
+    left:40%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Aps a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Goas img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:70%;
+    left:26%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Goas a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Tmls img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:80%;
+    left:45%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Tmls a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Pdchs img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:80%;
+    left:42%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Pdchs a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+.Krls img{
+    width:10%;
+    height:auto;
+    position: absolute;
+    top:80%;
+    left:30%;
+    border-radius: 10px/20px;
+    visibility: hidden;
+     
+}
+.Krls a:hover img{
+    visibility: visible;
+    animation: zoomin 0.5s;
+}
+
+
+
+
+
+
+
+#infohead{
+    text-transform: uppercase;
+      letter-spacing: 15px;
+      text-align: center;
+      margin-top:100px;
+      margin-bottom:100px;
+  }
+  
+  .info{
+    margin:20px 0px 20px 0px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background:linear-gradient(115deg,rgb(0, 204, 255) 30%,dodgerblue 70%);
+
+    padding:40px 20px 40px 20px
+  }
+  .infos
+  {
+      position: relative;
+  width:100%;
+  height:100vh;
+  /* padding-top:50px; */
+  box-sizing: border-box;
+      overflow:hidden;
+  }
+  .infos .infosimgl1
+  {
+      position:absolute;
+      float:left;
+      width:50%;
+      left:0;
+      background-image: url("images/india/dances.jpg");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentr1{
+      position: absolute;
+      float:right;
+      width:40%;
+      right:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+      text-shadow: 2px black;
+       color:white; 
+      overflow:hidden;
+      font-family:'Roboto', sans-serif;
+  font-weight:300;
+  }
+  .infos .infoscontentr1 h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  }
+  /* .infos .infosimgl
+  {
+      position:absolute;
+      float:left;
+      width:50%;
+      left:0;
+      background-image: url("images/taj.jpg");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentr{
+      position: absolute;
+      float:right;
+      width:40%;
+      right:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+      text-shadow: 2px black;
+       color:white; 
+      overflow:hidden;
+  }
+  .infos .infoscontentr h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  } */
+
+  /* .infos .infosimgr
+  {
+      position:absolute;
+      float:right;
+      width:50%;
+      right:0;
+      background-image: url("images/taj.jpg");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentl{
+      position: absolute;
+      float:left;
+      width:40%;
+      left:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+       color:white; 
+      overflow:hidden;
+  }
+  .infos .infoscontentl h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  } */
+  .infos .infosimgr1
+  {
+      position:absolute;
+      float:right;
+      width:50%;
+      right:0;
+      background-image: url("images/india/food.png");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentl1{
+      position: absolute;
+      float:left;
+      width:40%;
+      left:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+       color:white; 
+      overflow:hidden;
+      font-family:'Roboto', sans-serif;
+  font-weight:300;
+  }
+  .infos .infoscontentl1 h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  }
+  .infos .infosimgr11
+  {
+      position:absolute;
+      float:right;
+      width:50%;
+      right:0;
+      background-image: url("images/india/festies.jpg");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentl11{
+      position: absolute;
+      float:left;
+      width:40%;
+      left:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+       color:white; 
+      overflow:hidden;
+      font-family:'Roboto', sans-serif;
+  font-weight:300;
+  }
+  .infos .infoscontentl11 h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  }
+  .infos .infosimgl2
+  {
+      position:absolute;
+      float:left;
+      width:50%;
+      left:0;
+      background-image: url("images/india/relief.jpg");
+      height: 90%;
+      border-radius:5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .infos .infoscontentr2{
+      position: absolute;
+      float:right;
+      width:40%;
+      right:0;
+      padding:20px;
+      height: 100%;
+      text-align: center;
+      text-shadow: 2px black;
+       color:white; 
+      overflow:hidden;
+      font-family:'Roboto', sans-serif;
+  font-weight:300;
+  }
+  .infos .infoscontentr2 h2 {
+    margin:20% 0px 5% 0;
+    font-size:60px;
+  }
+
+
+
+
+
+
+
+
+
+  .activiteshead{
+    text-align: center;
+    letter-spacing: 10px;
+    margin:100px 0px 100px 0;
+    text-transform: uppercase;
+}
+  .activities{
+    display:grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(2,2fr);
+grid-gap:10px;
+margin-top:20px;
+width:100%;
+height:90vh;
+padding:10px;
+}
+.activity{
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.activity .activitycontent{
+    /* position: absolute; */
+    float:bottom;
+    background:rgba(0, 0, 0, 0.363);
+    color:white;
+    height:100%;
+    visibility: hidden;
+    transition: 0.5s ease;
+    border-radius: 5%;
+    overflow: hidden;
+    font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
+.activity .activitycontent p{
+    LEFT:10%;
+    position: absolute;
+    bottom:3%;
+}
+.activity .activitycontent h1{
+LEFT:10%;
+    position: absolute;
+    top:10%;
+}
+.activity:hover .activitycontent{
+animation:slideup 0.5s;
+    transition: 0.5s ease;
+    visibility: visible;
+    
+}
+.activity:nth-child(1)
+{
+    background: url('images/india/gir\ safari.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.activity:nth-child(2)
+{
+    background: url('images/india/ice\ sking.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.activity:nth-child(3)
+{
+    background: url('images/india/trekking.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.activity:nth-child(4)
+{
+    background: url('images/india/paragliding.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: span 2;
+    
+}
+.activity:nth-child(5)
+{
+    background: url('images/india/rafting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+
+.citysurfhead{
+    text-align:center;
+    letter-spacing: 10px;
+    margin:100px 0px 100px 0;
+}
+.city{
+    position: relative;
+    margin-bottom:100px;
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+  overflow:hidden;
+ font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
+.citysurf h1{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 3em;
+    margin:10px 0px 30px 0px;
+}
+.city .cityimage{
+    position:absolute;
+    text-align: center;
+      width:100%;
+      height:75%;
+      
+}
+.city .citycontent{
+    position:absolute;
+    bottom:0;
+    padding:80px 80px 100px 80px;
+    text-align:center;
+    width:100%;
+    height:25%;
+    
+}
+.city .citycontent p{
+    margin-top:20px;
+} 
+
+
+.city .cityimage1{
+    position:absolute;
+    text-align: center;
+      width:100%;
+      height:75%;
+      background-image: url("krntk/images/hampi1.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+}
+.city .cityimage2{
+    position:absolute;
+    text-align: center;
+      width:100%;
+      height:75%;
+      background-image: url("up/images/taj\ -\ Copy.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+}
+
+.city .cityimage3{
+    position:absolute;
+    text-align: center;
+      width:100%;
+      height:75%;
+      background-image: url("goa/images/beach-goa-travelkida.jpg.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+}
+.city .cityimage4{
+    position:absolute;
+    text-align: center;
+      width:100%;
+      height:75%;
+      background-image: url("od/images/puri/ratha-yatra-27.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+}
+
+
+
+
+
+
+
+
+
+.hero{
+    height:100vh;
+    width:100%;
+    position: relative;
+    overflow:hidden;
+}
+.hero .hero-image {
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-image: url("images/flag.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      filter: blur(8px);
+}
+.hero .hero-text {
+    text-align: center;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:2.8em;
+    text-shadow: 5px 5px 10px black;
+    letter-spacing: 10px;
+    transform: translate(-50%, -50%);
+    color: white;
+    overflow:hidden;
+  }
+
+
+
+
+footer{
+    margin:300px 0px 0px 0px;
+    position: relative;
+    bottom:0;
+}
+ .footer1{
+    position: absolute;
+    width:100%;
+    height:300px;
+    color:white;
+    background:rgb(53, 52, 52);
+    transform: skewY(-5deg) translateY(-100px);
+}
+.footer2{
+    position: absolute;
+    width:100%;
+    height:300px;
+    padding:50px 20px 20px 50px;
+    color:white;
+    background:rgb(53, 52, 52);
+    font-family:'Roboto', sans-serif;
+  font-weight:300;
+    /* transform: translateY(-300px); */
+    /* transform: skewY(-10deg); */
+}
